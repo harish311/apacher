@@ -1,0 +1,15 @@
+---
+- name: install apache
+  hosts: web
+  tasks:
+     - name: install apache
+       yum:
+         name: httpd
+         state: latest
+
+     - name: start service
+       service:
+           name: httpd
+           state: started
+
+...
